@@ -1,0 +1,55 @@
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index and packages (RedHat)
+    dnf:
+      update_cache: yes
+      name: 
+        - "*"
+      state: latest
+    when: ansible_os_family == "RedHat"
+
+  - name: install httpd (RedHat)
+    dnf:
+      name:
+        - httpd
+    when: ansible_os_family == "RedHat"
+
+  - name: update repository index and packages (Ubuntu)
+    apt:
+      update_cache: yes
+      name:
+        - "*"
+      state: latest
+    when: ansible_os_family == "Debian"
+
+  - name: install apache2 (Ubuntu)
+    apt:
+      name:
+        - apache2
+    when: ansible_os_family == "Debian"
+
+  - name: start httpd service (RedHat)
+    service:
+      name: httpd
+      state: started
+    when: ansible_os_family == "RedHat"
+
+  - name: add test webpage (on all servers)
+    copy:
+      content: "Hello from {{ ansible_host }} - Web server is up!"
+      dest: /var/www/html/index.html
+      mode: '0644'
+
+  - name: allow traffic on port 80 in firewalld (RedHat)
+    firewalld:
+      port: 80/tcp
+      permanent: yes
+      state: enabled
+    when: ansible_os_family == "RedHat"
+
+  - name: reload firewalld to ensure changes apply (Red Hat)
+    command: firewall-cmd --reload
+    when: ansible_os_family == "RedHat"
+

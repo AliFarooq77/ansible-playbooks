@@ -1,0 +1,78 @@
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index (RedHat)
+    dnf:
+      update_cache: yes
+    when: ansible_os_family == "RedHat"
+
+  - name: update repository index (Ubuntu)
+    apt:
+      update_cache: yes
+    when: ansible_os_family == "Debian"
+
+  - name: update the repositories (RedHat)
+    dnf:
+      name: "*"
+      state: latest
+    when: ansible_os_family == "RedHat"
+
+  - name: update the repositories (Ubuntu)
+    apt:
+      name: "*"
+      state: latest
+    when: ansible_os_family == "Debian"
+  
+  - name: install httpd package (RedHat)
+    dnf:
+      name: httpd
+    when: ansible_os_family == "RedHat"
+
+  - name: install apache2 package (Ubuntu)
+    apt:
+      name: apache2
+    when: ansible_os_family == "Debian"
+  
+  - name: start httpd service (RedHat)
+    service:
+      name: httpd
+      state: started
+    when: ansible_os_family == "RedHat"
+
+# service automatically starts running once it is installed
+#  - name: start apache2 service (Ubuntu)
+#    service:
+#      name: apache2
+#      state: started
+#    when: ansible_os_family == "Debian"
+
+  - name: add test webpage
+    copy:
+      content: "Hello from {{ ansible_host }} - Web server is up!"
+      dest: /var/www/html/index.html
+      mode: '0644'
+
+  - name: allow traffic on port 80 in firewalld (RedHat)
+    firewalld:
+      port: 80/tcp
+      permanent: yes
+      state: enabled
+    when: ansible_os_family == "RedHat"
+
+# ufw is disabled by default, therefore no need to add rule
+#  - name: allow traffic on port 80 in ufw (Ubuntu)
+#    ufw:
+#      rule: allow
+#      port: 80
+#      proto: tcp
+#    when: ansible_os_family == "Debian"
+
+  - name: reload firewalld to ensure changes apply (Red Hat)
+    command: firewall-cmd --reload
+    when: ansible_os_family == "RedHat"
+
+#  - name: reload ufw to ensure changes apply (Ubuntu)
+#    command: ufw reload
+#    when: ansible_os_family == "Debian"
+

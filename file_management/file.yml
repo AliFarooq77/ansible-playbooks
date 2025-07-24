@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: copying a text file containing password to the servers
+    copy:
+      src: /home/alifarooq/ansible-practice/file_management/password.txt
+      dest: /home/live
+      mode: '0644'

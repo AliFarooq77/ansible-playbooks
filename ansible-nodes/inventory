@@ -1,0 +1,10 @@
+[web_servers]
+192.168.0.206 ansible_user=live ansible_become_password=live
+
+[db_servers]
+192.168.0.217 ansible_user=shellscribe ansible_become_password=ali123
+192.168.0.206 ansible_user=live ansible_become_password=live
+
+[file_servers]
+192.168.0.206 ansible_user=live ansible_become_password=live
+192.168.0.212 ansible_become_password=ali

@@ -1,0 +1,201 @@
+ansible [core 2.16.14]
+  config file = /home/alifarooq/ansible-practice/ansible.cfg
+  configured module search path = ['/home/alifarooq/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/alifarooq/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.13.2 (main, Feb  4 2025, 00:00:00) [GCC 14.2.1 20250110 (Red Hat 14.2.1-7)] (/usr/bin/python3)
+  jinja version = 3.1.5
+  libyaml = True
+Using /home/alifarooq/ansible-practice/ansible.cfg as config file
+host_list declined parsing /home/alifarooq/ansible-practice/inventory as it did not pass its verify_file() method
+script declined parsing /home/alifarooq/ansible-practice/inventory as it did not pass its verify_file() method
+auto declined parsing /home/alifarooq/ansible-practice/inventory as it did not pass its verify_file() method
+Parsed /home/alifarooq/ansible-practice/inventory inventory source with ini plugin
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'echo ~shellscribe && sleep 0'"'"''
+<192.168.0.216> (0, b'/home/shellscribe\n', b'')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/shellscribe/.ansible/tmp `"&& mkdir "` echo /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156 `" && echo ansible-tmp-1739890524.882999-46182-56294866669156="` echo /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156 `" ) && sleep 0'"'"''
+<192.168.0.212> (0, b'/home/alifarooq\n', b'')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/alifarooq/.ansible/tmp `"&& mkdir "` echo /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736 `" && echo ansible-tmp-1739890524.9289536-46181-219589274367736="` echo /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736 `" ) && sleep 0'"'"''
+<192.168.0.216> (0, b'ansible-tmp-1739890524.882999-46182-56294866669156=/home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156\n', b'')
+<192.168.0.212> (0, b'ansible-tmp-1739890524.9289536-46181-219589274367736=/home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736\n', b'')
+<192.168.0.216> Attempting python interpreter discovery
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.212> Attempting python interpreter discovery
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'python3.12'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.11'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.10'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.9'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.8'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'python3.12'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.11'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.10'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.9'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.8'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<192.168.0.216> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3.9\n/usr/bin/python3\n/usr/libexec/platform-python\n/usr/bin/python\n/usr/bin/python\nENDFOUND\n', b'')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'/usr/bin/python3.9 && sleep 0'"'"''
+<192.168.0.212> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3.9\n/usr/bin/python3\n/usr/libexec/platform-python\n/usr/bin/python\n/usr/bin/python\nENDFOUND\n', b'')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'/usr/bin/python3.9 && sleep 0'"'"''
+<192.168.0.216> (0, b'{"platform_dist_result": [], "osrelease_content": "NAME=\\"Red Hat Enterprise Linux\\"\\nVERSION=\\"9.5 (Plow)\\"\\nID=\\"rhel\\"\\nID_LIKE=\\"fedora\\"\\nVERSION_ID=\\"9.5\\"\\nPLATFORM_ID=\\"platform:el9\\"\\nPRETTY_NAME=\\"Red Hat Enterprise Linux 9.5 (Plow)\\"\\nANSI_COLOR=\\"0;31\\"\\nLOGO=\\"fedora-logo-icon\\"\\nCPE_NAME=\\"cpe:/o:redhat:enterprise_linux:9::baseos\\"\\nHOME_URL=\\"https://www.redhat.com/\\"\\nDOCUMENTATION_URL=\\"https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9\\"\\nBUG_REPORT_URL=\\"https://issues.redhat.com/\\"\\n\\nREDHAT_BUGZILLA_PRODUCT=\\"Red Hat Enterprise Linux 9\\"\\nREDHAT_BUGZILLA_PRODUCT_VERSION=9.5\\nREDHAT_SUPPORT_PRODUCT=\\"Red Hat Enterprise Linux\\"\\nREDHAT_SUPPORT_PRODUCT_VERSION=\\"9.5\\"\\n"}\n', b'')
+Using module file /usr/lib/python3.13/site-packages/ansible/modules/setup.py
+<192.168.0.216> PUT /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmpbxbixttn TO /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_setup.py
+<192.168.0.216> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' '[192.168.0.216]'
+<192.168.0.212> (0, b'{"platform_dist_result": [], "osrelease_content": "NAME=\\"Red Hat Enterprise Linux\\"\\nVERSION=\\"9.4 (Plow)\\"\\nID=\\"rhel\\"\\nID_LIKE=\\"fedora\\"\\nVERSION_ID=\\"9.4\\"\\nPLATFORM_ID=\\"platform:el9\\"\\nPRETTY_NAME=\\"Red Hat Enterprise Linux 9.4 (Plow)\\"\\nANSI_COLOR=\\"0;31\\"\\nLOGO=\\"fedora-logo-icon\\"\\nCPE_NAME=\\"cpe:/o:redhat:enterprise_linux:9::baseos\\"\\nHOME_URL=\\"https://www.redhat.com/\\"\\nDOCUMENTATION_URL=\\"https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9\\"\\nBUG_REPORT_URL=\\"https://bugzilla.redhat.com/\\"\\n\\nREDHAT_BUGZILLA_PRODUCT=\\"Red Hat Enterprise Linux 9\\"\\nREDHAT_BUGZILLA_PRODUCT_VERSION=9.4\\nREDHAT_SUPPORT_PRODUCT=\\"Red Hat Enterprise Linux\\"\\nREDHAT_SUPPORT_PRODUCT_VERSION=\\"9.4\\"\\n"}\n', b'')
+Using module file /usr/lib/python3.13/site-packages/ansible/modules/setup.py
+<192.168.0.212> PUT /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmpakvpzut6 TO /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_setup.py
+<192.168.0.212> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' '[192.168.0.212]'
+<192.168.0.216> (0, b'sftp> put /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmpbxbixttn /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_setup.py\n', b'')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'chmod u+x /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/ /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_setup.py && sleep 0'"'"''
+<192.168.0.216> (0, b'', b'')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' -tt 192.168.0.216 '/bin/sh -c '"'"'sudo -H -S -p "[sudo via ansible, key=tswwedmvtomoyzckfbnfjjbrajvdjgpe] password:" -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-tswwedmvtomoyzckfbnfjjbrajvdjgpe ; /usr/bin/python3 /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<192.168.0.212> (0, b'sftp> put /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmpakvpzut6 /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_setup.py\n', b'')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'chmod u+x /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/ /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_setup.py && sleep 0'"'"''
+<192.168.0.212> (0, b'', b'')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' -tt 192.168.0.212 '/bin/sh -c '"'"'sudo -H -S -p "[sudo via ansible, key=fvxuhiyvddmzwcsfhxgszycbugdlkfkw] password:" -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-fvxuhiyvddmzwcsfhxgszycbugdlkfkw ; /usr/bin/python3 /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<192.168.0.216> (0, b'\r\n\r\n{"ansible_facts": {"ansible_pkg_mgr": "dnf"}, "invocation": {"module_args": {"filter": ["ansible_pkg_mgr"], "gather_subset": ["!all"], "gather_timeout": 10, "fact_path": "/etc/ansible/facts.d"}}}\r\n', b'Shared connection to 192.168.0.216 closed.\r\n')
+<192.168.0.212> (0, b'\r\n\r\n{"ansible_facts": {"ansible_pkg_mgr": "dnf"}, "invocation": {"module_args": {"filter": ["ansible_pkg_mgr"], "gather_subset": ["!all"], "gather_timeout": 10, "fact_path": "/etc/ansible/facts.d"}}}\r\n', b'Shared connection to 192.168.0.212 closed.\r\n')
+Using module file /usr/lib/python3.13/site-packages/ansible/modules/dnf.py
+<192.168.0.216> PUT /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmpewvvyg7w TO /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_dnf.py
+Using module file /usr/lib/python3.13/site-packages/ansible/modules/dnf.py
+<192.168.0.216> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' '[192.168.0.216]'
+<192.168.0.212> PUT /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmp30byh8qn TO /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_dnf.py
+<192.168.0.212> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' '[192.168.0.212]'
+<192.168.0.216> (0, b'sftp> put /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmpewvvyg7w /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_dnf.py\n', b'')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'chmod u+x /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/ /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_dnf.py && sleep 0'"'"''
+<192.168.0.212> (0, b'sftp> put /home/alifarooq/.ansible/tmp/ansible-local-46178odj6nmsp/tmp30byh8qn /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_dnf.py\n', b'')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'chmod u+x /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/ /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_dnf.py && sleep 0'"'"''
+<192.168.0.216> (0, b'', b'')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' -tt 192.168.0.216 '/bin/sh -c '"'"'sudo -H -S -p "[sudo via ansible, key=kwdynecklztmabrhcwoeaqhkjhbijngz] password:" -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-kwdynecklztmabrhcwoeaqhkjhbijngz ; /usr/bin/python3 /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/AnsiballZ_dnf.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<192.168.0.212> (0, b'', b'')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' -tt 192.168.0.212 '/bin/sh -c '"'"'sudo -H -S -p "[sudo via ansible, key=ccqnqgarkgxbqcxrjqfydoozifxqtelx] password:" -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ccqnqgarkgxbqcxrjqfydoozifxqtelx ; /usr/bin/python3 /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/AnsiballZ_dnf.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<192.168.0.216> (0, b'\r\n\x1b[?25l| Checking server status\r\x1b[0K\r/ Checking server status\r\x1b[0K\r- Checking server status\r\x1b[0K\r\\ Checking server status\r\x1b[0K\r| Checking server status\r\x1b[0K\r/ Checking server status\r\x1b[0K\r- Checking server status\r\x1b[?25h\x1b[0K\r\r\n{"msg": "", "changed": true, "results": ["Installed: git-2.43.5-2.el9_5.x86_64", "Installed: git-core-2.43.5-2.el9_5.x86_64", "Installed: git-core-doc-2.43.5-2.el9_5.noarch", "Installed: perl-TermReadKey-2.38-11.el9.x86_64", "Installed: perl-Error-1:0.17029-7.el9.noarch", "Installed: perl-lib-0.65-481.el9.x86_64", "Installed: perl-Git-2.43.5-2.el9_5.noarch"], "rc": 0, "invocation": {"module_args": {"name": ["git"], "allow_downgrade": false, "autoremove": false, "bugfix": false, "cacheonly": false, "disable_gpg_check": false, "disable_plugin": [], "disablerepo": [], "download_only": false, "enable_plugin": [], "enablerepo": [], "exclude": [], "installroot": "/", "install_repoquery": true, "install_weak_deps": true, "security": false, "skip_broken": false, "update_cache": false, "update_only": false, "validate_certs": true, "sslverify": true, "lock_timeout": 30, "allowerasing": false, "nobest": false, "use_backend": "auto", "conf_file": null, "disable_excludes": null, "download_dir": null, "list": null, "releasever": null, "state": null}}}\r\n', b'Shared connection to 192.168.0.216 closed.\r\n')
+<192.168.0.216> ESTABLISH SSH CONNECTION FOR USER: shellscribe
+<192.168.0.216> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="shellscribe"' -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/5f67a9b7dd"' 192.168.0.216 '/bin/sh -c '"'"'rm -f -r /home/shellscribe/.ansible/tmp/ansible-tmp-1739890524.882999-46182-56294866669156/ > /dev/null 2>&1 && sleep 0'"'"''
+<192.168.0.216> (0, b'', b'')
+192.168.0.216 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false,
+            "allowerasing": false,
+            "autoremove": false,
+            "bugfix": false,
+            "cacheonly": false,
+            "conf_file": null,
+            "disable_excludes": null,
+            "disable_gpg_check": false,
+            "disable_plugin": [],
+            "disablerepo": [],
+            "download_dir": null,
+            "download_only": false,
+            "enable_plugin": [],
+            "enablerepo": [],
+            "exclude": [],
+            "install_repoquery": true,
+            "install_weak_deps": true,
+            "installroot": "/",
+            "list": null,
+            "lock_timeout": 30,
+            "name": [
+                "git"
+            ],
+            "nobest": false,
+            "releasever": null,
+            "security": false,
+            "skip_broken": false,
+            "sslverify": true,
+            "state": null,
+            "update_cache": false,
+            "update_only": false,
+            "use_backend": "auto",
+            "validate_certs": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "Installed: git-2.43.5-2.el9_5.x86_64",
+        "Installed: git-core-2.43.5-2.el9_5.x86_64",
+        "Installed: git-core-doc-2.43.5-2.el9_5.noarch",
+        "Installed: perl-TermReadKey-2.38-11.el9.x86_64",
+        "Installed: perl-Error-1:0.17029-7.el9.noarch",
+        "Installed: perl-lib-0.65-481.el9.x86_64",
+        "Installed: perl-Git-2.43.5-2.el9_5.noarch"
+    ]
+}
+<192.168.0.212> (0, b'\r\n\x1b[?25l| Checking server status\r\x1b[0K\r/ Checking server status\r\x1b[0K\r- Checking server status\r\x1b[0K\r\\ Checking server status\r\x1b[0K\r| Checking server status\r\x1b[0K\r/ Checking server status\r\x1b[?25h\x1b[0K\r\r\n{"msg": "", "changed": true, "results": ["Installed: git-2.43.5-2.el9_5.x86_64", "Installed: git-core-2.43.5-2.el9_5.x86_64", "Installed: git-core-doc-2.43.5-2.el9_5.noarch", "Installed: perl-TermReadKey-2.38-11.el9.x86_64", "Installed: perl-Error-1:0.17029-7.el9.noarch", "Installed: perl-lib-0.65-481.el9.x86_64", "Installed: perl-Git-2.43.5-2.el9_5.noarch"], "rc": 0, "invocation": {"module_args": {"name": ["git"], "allow_downgrade": false, "autoremove": false, "bugfix": false, "cacheonly": false, "disable_gpg_check": false, "disable_plugin": [], "disablerepo": [], "download_only": false, "enable_plugin": [], "enablerepo": [], "exclude": [], "installroot": "/", "install_repoquery": true, "install_weak_deps": true, "security": false, "skip_broken": false, "update_cache": false, "update_only": false, "validate_certs": true, "sslverify": true, "lock_timeout": 30, "allowerasing": false, "nobest": false, "use_backend": "auto", "conf_file": null, "disable_excludes": null, "download_dir": null, "list": null, "releasever": null, "state": null}}}\r\n', b'Shared connection to 192.168.0.212 closed.\r\n')
+<192.168.0.212> ESTABLISH SSH CONNECTION FOR USER: None
+<192.168.0.212> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'IdentityFile="/home/alifarooq/.ssh/id_ed25519_ansible"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/alifarooq/.ansible/cp/adbcd93a1e"' 192.168.0.212 '/bin/sh -c '"'"'rm -f -r /home/alifarooq/.ansible/tmp/ansible-tmp-1739890524.9289536-46181-219589274367736/ > /dev/null 2>&1 && sleep 0'"'"''
+<192.168.0.212> (0, b'', b'')
+192.168.0.212 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false,
+            "allowerasing": false,
+            "autoremove": false,
+            "bugfix": false,
+            "cacheonly": false,
+            "conf_file": null,
+            "disable_excludes": null,
+            "disable_gpg_check": false,
+            "disable_plugin": [],
+            "disablerepo": [],
+            "download_dir": null,
+            "download_only": false,
+            "enable_plugin": [],
+            "enablerepo": [],
+            "exclude": [],
+            "install_repoquery": true,
+            "install_weak_deps": true,
+            "installroot": "/",
+            "list": null,
+            "lock_timeout": 30,
+            "name": [
+                "git"
+            ],
+            "nobest": false,
+            "releasever": null,
+            "security": false,
+            "skip_broken": false,
+            "sslverify": true,
+            "state": null,
+            "update_cache": false,
+            "update_only": false,
+            "use_backend": "auto",
+            "validate_certs": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "Installed: git-2.43.5-2.el9_5.x86_64",
+        "Installed: git-core-2.43.5-2.el9_5.x86_64",
+        "Installed: git-core-doc-2.43.5-2.el9_5.noarch",
+        "Installed: perl-TermReadKey-2.38-11.el9.x86_64",
+        "Installed: perl-Error-1:0.17029-7.el9.noarch",
+        "Installed: perl-lib-0.65-481.el9.x86_64",
+        "Installed: perl-Git-2.43.5-2.el9_5.noarch"
+    ]
+}
